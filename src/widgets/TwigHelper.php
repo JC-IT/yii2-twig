@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace common\widgets;
+namespace JCIT\twig\widgets;
 
 use JCIT\twig\interfaces\TwigHelperInterface;
 use yii\helpers\Html;
