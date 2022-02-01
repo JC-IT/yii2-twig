@@ -1,5 +1,6 @@
 # Helpers for working with Twig
 
+[![codecov](https://codecov.io/gh/jc-it/yii2-twig/branch/master/graph/badge.svg)](https://codecov.io/gh/jc-it/yii2-twig)
 [![Continous integration](https://github.com/jc-it/yii2-twig/actions/workflows/ci.yaml/badge.svg)](https://github.com/jc-it/yii2-twig/actions/workflows/ci.yaml)
 ![Packagist Total Downloads](https://img.shields.io/packagist/dt/jc-it/yii2-twig)
 ![Packagist Monthly Downloads](https://img.shields.io/packagist/dm/jc-it/yii2-twig)
