@@ -7,6 +7,7 @@ namespace JCIT\twig\validators;
 use Twig\Environment;
 use Twig\Extension\SandboxExtension;
 use Twig\Loader\ArrayLoader;
+use Twig\Sandbox\Sandbox;
 use Twig\Sandbox\SecurityPolicy;
 use yii\validators\Validator;
 
@@ -73,11 +74,11 @@ class TwigValidator extends Validator
                 'strict_variables' => $this->strict
             ]
         );
-        $twig->addExtension(new SandboxExtension($this->policy, true));
+        $sandbox = new Sandbox($twig, $this->policy);
 
         try {
             $context = $this->context ?? $this->createContext($this->variables);
-            $result = $twig->render('', $context);
+            $result = $sandbox->render('', $context);
 
             if (isset($this->outputTest)) {
                 ($this->outputTest)($result);
